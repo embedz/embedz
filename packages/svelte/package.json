@@ -1,6 +1,6 @@
 {
 	"name": "@embedz/test",
-	"version": "0.0.8",
+	"version": "0.0.9",
 	"description": "Easy, dependency free embeds for Svelte and Vue.",
 	"repository": {
 		"type": "git",
@@ -24,7 +24,7 @@
 		"typescript",
 		"vue",
 		"svelte",
-		"embed",
+		"embeds",
 		"iframe",
 		"embedz"
 	],
