@@ -12,5 +12,3 @@ Easy, dependency free embeds for Svelte and Vue.
   posterquality="low"
 />
 ```
-
-[demo](https://svelte.dev/playground/ca582264a045460b99fc444a0b3d30f1?version=5.20.2)
