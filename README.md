@@ -3,12 +3,12 @@ Easy, dependency free embeds for Svelte and Vue.
 
 ```shell
 # Supports only Svelte for now, requires Svelte 5 and above
-npm i @embedz/test
+npm i @embedz/svelte
 ```
 
 ```svelte
 <script>
-  import { YouTube, Vimeo } from "@embedz/test";
+  import { YouTube, Vimeo } from "@embedz/svelte";
 </script>
 
 <YouTube 
