@@ -21,8 +21,6 @@ npm i @embedz/svelte
 
 ### Usage
 
-``App.vue``
-
 ```svelte
 <YouTube id="KRVnaN29GvM" />
 ```
@@ -84,8 +82,6 @@ type: ``string``
 ## Vimeo
 
 ### Usage
-
-``App.vue``
 
 ```svelte
 <Vimeo id="32001208" />
