@@ -38,6 +38,7 @@
             "https://www.google.com",
             "https://googleads.g.doubleclick.net", 
             "https://static.doubleclick.net",
+            "https://gstatic.com",
             "https://i.ytimg.com",
         ].forEach(u => {
             !h.querySelector(`link[href="${u}"]`) && 
