@@ -3,7 +3,7 @@ Easy embeds for Svelte and Vue.
 
 ```svelte
 <script>
-  // svelte only for now, requires svelte 5 and above
+  // Supports only Svelte for now, requires Svelte 5 and above
   import { YouTube, Vimeo } from "@embedz/test";
 </script>
 
