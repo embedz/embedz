@@ -1,2 +1,2 @@
 # embedz
-Easy embeds for Svelte and Vue.
+easy embeds for Svelte and Vue.
