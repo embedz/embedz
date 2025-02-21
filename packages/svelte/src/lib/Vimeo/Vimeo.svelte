@@ -37,6 +37,7 @@
             "https://i.vimeocdn.com", 
             "https://f.vimeocdn.com",
             "https://fresnel.vimeocdn.com",
+            "https://gstatic.com",
             "https://vumbnail.com",
         ].forEach(u => {
             !h.querySelector(`link[href="${u}"]`) && 
