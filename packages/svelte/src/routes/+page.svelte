@@ -3,31 +3,7 @@
 </script>
 
 <YouTube 
-    id="KRVnaN29GvM" 
-    posterquality="low"
-    params="controls=0&mute=1"
-/>
-
-<YouTube 
-    id="KRVnaN29GvM" 
-    posterquality="low"
-    params="controls=0&mute=1"
-/>
-
-<YouTube 
-    id="KRVnaN29GvM" 
-    posterquality="low"
-    params="controls=0&mute=1"
-/>
-
-<YouTube 
-    id="KRVnaN29GvM" 
-    posterquality="low"
-    params="controls=0&mute=1"
-/>
-
-<YouTube 
-    id="KRVnaN29GvM" 
-    posterquality="low"
-    params="controls=0&mute=1"
+  id="KRVnaN29GvM" 
+  posterquality="max"
+  title="Rock the Boat"
 />
