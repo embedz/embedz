@@ -1,5 +1,5 @@
 # embedz
-Easy embeds for Svelte and Vue, Dependency free
+Dependency free, easy embeds for Svelte and Vue,
 
 ```svelte
 <script>
