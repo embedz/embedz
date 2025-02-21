@@ -13,6 +13,6 @@ npm i @embedz/test
 
 <YouTube 
   id="KRVnaN29GvM" 
-  posterquality="low"
+  posterquality="max"
 />
 ```
