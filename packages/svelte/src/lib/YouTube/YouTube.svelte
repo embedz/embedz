@@ -61,7 +61,7 @@
             loading="lazy"
         ></iframe>
     {:else}
-        <button type="button" onclick={() => a = true} aria-label="play"></button>
+        <button type="button" onclick={() => a = true} aria-label={title} {title}></button>
     {/if}
 </div>
 
