@@ -53,7 +53,7 @@
     {#if a}
         <iframe 
             src="https://player.vimeo.com/video/{v}?{p()}" 
-            title={title}
+            {title}
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen

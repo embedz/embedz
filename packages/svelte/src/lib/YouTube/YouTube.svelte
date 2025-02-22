@@ -54,7 +54,7 @@
     {#if a}
         <iframe 
             src="https://www.youtube-nocookie.com/embed/{v}?{p()}" 
-            title={title}
+            {title}
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
