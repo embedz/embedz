@@ -58,7 +58,7 @@ type: ``string``
 ```svelte
 <YouTube
   id="KRVnaN29GvM"
-  poster="//picsum.photos/1280/720"
+  poster="https://picsum.photos/1280/720"
 />
 ```
 
@@ -120,7 +120,7 @@ type: ``string``
 ```svelte
 <Vimeo
   id="32001208"
-  poster="//picsum.photos/1280/720"
+  poster="https://picsum.photos/1280/720"
 />
 ```
 
@@ -182,7 +182,7 @@ type: ``string``
 ```svelte
 <Dailymotion 
   id="x8e31lf"
-  poster="//picsum.photos/1280/720"
+  poster="https://picsum.photos/1280/720"
 />
 ```
 
