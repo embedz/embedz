@@ -155,6 +155,72 @@ type: ``string``
 />
 ```
 
+## Dailymotion
+
+```svelte
+<Dailymotion id="x8e31lf" />
+```
+
+You can also pass in the full URL for the video
+
+```svelte
+<Dailymotion id="https://dai.ly/x8e31lf" />
+```
+
+### Optional props
+
+``poster``
+
+type: ``string``
+
+```svelte
+<Dailymotion 
+  id="x8e31lf"
+  poster="//picsum.photos/1280/720"
+/>
+```
+
+``posterquality``
+
+type: ``'max' | 'high' | 'default' | 'low'``
+
+default: ``'default'``
+
+```svelte
+<Dailymotion 
+  id="x8e31lf"
+  posterquality="low"
+/>
+```
+
+``params``
+
+type: ``string``
+
+```svelte
+<Dailymotion 
+  id="x8e31lf"
+  params="mute=true&loop=false"
+/>
+```
+
+``title``
+
+type: ``string``
+
+```svelte
+<Dailymotion 
+  id="x8e31lf"
+  title="Dolby Vision"
+/>
+```
+
 ## License
 
 Licensed under the [MIT license](https://github.com/embedz/embedz/blob/main/LICENSE.md).
+
+## Contributors
+
+<a href="https://github.com/vueframe/vueframe/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=vueframe/vueframe" />
+</a>

@@ -24,7 +24,7 @@
     let s = poster || `https://wsrv.nl/?url=https://www.dailymotion.com/thumbnail/video/${v}&output=webp&q=${m}`;
 
     function p() {
-        const u = new URLSearchParams(params || '');
+        let u = new URLSearchParams(params || '');
         u.append('autoplay', 'true');
         return u.toString();
     }

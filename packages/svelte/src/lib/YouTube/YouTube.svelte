@@ -28,10 +28,6 @@
         let u = new URLSearchParams(params || '');
         u.append('autoplay', '1');
         u.append('playsinline', '1');
-        /*u.append('enablejsapi', '1');
-        if (typeof window !== 'undefined') {
-            u.append('origin', window.location.origin);
-        }*/
         return u.toString();
     }
 

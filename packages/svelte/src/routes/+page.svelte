@@ -3,9 +3,9 @@
 </script>
 
 <Dailymotion 
-  id="x8wipy8" 
-  title="2024 Total Solar Eclipse: Through the Eyes of NASA (Official Broadcast)"
+  id="x8e31lf" 
   posterquality="max"
+  title="Dolby Vision"
 />
 
 <YouTube 
