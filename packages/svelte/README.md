@@ -37,6 +37,10 @@ yarn add @embedz/svelte
 
 ## Youtube
 
+### id
+
+type: ``string``
+
 ```svelte
 <YouTube id="KRVnaN29GvM" />
 ```
@@ -47,9 +51,7 @@ You can also pass in the full URL for the video
 <YouTube id="https://youtu.be/KRVnaN29GvM" />
 ```
 
-### Optional props
-
-``poster``
+### poster
 
 type: ``string``
 
@@ -60,11 +62,11 @@ type: ``string``
 />
 ```
 
-``posterquality``
+### posterquality
 
-type: ``'max' | 'high' | 'default' | 'low'``
+type: ``"max" | "high" | "default" | "low"``
 
-default: ``'default'``
+default: ``"default"``
 
 ```svelte
 <YouTube
@@ -73,7 +75,7 @@ default: ``'default'``
 />
 ```
 
-``params``
+### params
 
 type: ``string``
 
@@ -84,7 +86,7 @@ type: ``string``
 />
 ```
 
-``title``
+### title
 
 type: ``string``
 
@@ -97,6 +99,10 @@ type: ``string``
 
 ## Vimeo
 
+### id
+
+type: ``string``
+
 ```svelte
 <Vimeo id="32001208" />
 ```
@@ -107,9 +113,7 @@ You can also pass in the full URL for the video
 <Vimeo id="https://vimeo.com/32001208" />
 ```
 
-### Optional props
-
-``poster``
+### poster
 
 type: ``string``
 
@@ -120,11 +124,11 @@ type: ``string``
 />
 ```
 
-``posterquality``
+### posterquality
 
-type: ``'max' | 'high' | 'default' | 'low'``
+type: ``"max" | "high" | "default" | "low"``
 
-default: ``'default'``
+default: ``"default"``
 
 ```svelte
 <Vimeo
@@ -133,7 +137,7 @@ default: ``'default'``
 />
 ```
 
-``params``
+### params
 
 type: ``string``
 
@@ -144,7 +148,7 @@ type: ``string``
 />
 ```
 
-``title``
+### title
 
 type: ``string``
 
@@ -157,6 +161,10 @@ type: ``string``
 
 ## Dailymotion
 
+### id
+
+type: ``string``
+
 ```svelte
 <Dailymotion id="x8e31lf" />
 ```
@@ -167,9 +175,7 @@ You can also pass in the full URL for the video
 <Dailymotion id="https://dai.ly/x8e31lf" />
 ```
 
-### Optional props
-
-``poster``
+### poster
 
 type: ``string``
 
@@ -180,11 +186,11 @@ type: ``string``
 />
 ```
 
-``posterquality``
+### posterquality
 
-type: ``'max' | 'high' | 'default' | 'low'``
+type: ``"max" | "high" | "default" | "low"``
 
-default: ``'default'``
+default: ``"default"``
 
 ```svelte
 <Dailymotion 
@@ -193,7 +199,7 @@ default: ``'default'``
 />
 ```
 
-``params``
+### params
 
 type: ``string``
 
@@ -204,7 +210,7 @@ type: ``string``
 />
 ```
 
-``title``
+### title
 
 type: ``string``
 
