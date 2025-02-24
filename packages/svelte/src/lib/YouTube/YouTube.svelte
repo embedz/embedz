@@ -50,7 +50,7 @@
     });
 </script>
 
-<div aria-label="YouTube" style={`background-image: url('${s}');`}>
+<div aria-label="YouTube Embed" style={`background-image: url('${s}');`}>
     {#if a}
         <iframe 
             src="https://www.youtube-nocookie.com/embed/{v}?{p()}" 

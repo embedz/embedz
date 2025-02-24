@@ -1,6 +1,6 @@
 {
 	"name": "@embedz/svelte",
-	"version": "1.0.15",
+	"version": "1.0.16",
 	"description": "Easy, dependency free embeds for Svelte and Vue.",
 	"repository": {
 		"type": "git",
@@ -66,27 +66,27 @@
 		"svelte": "^5.0.0"
 	},
 	"devDependencies": {
-		"@eslint/compat": "^1.2.6",
-		"@eslint/js": "^9.20.0",
+		"@eslint/compat": "^1.2.7",
+		"@eslint/js": "^9.21.0",
 		"@sveltejs/adapter-auto": "^4.0.0",
 		"@sveltejs/kit": "^2.17.2",
 		"@sveltejs/package": "^2.3.10",
 		"@sveltejs/vite-plugin-svelte": "^5.0.3",
 		"@testing-library/jest-dom": "^6.6.3",
 		"@testing-library/svelte": "^5.2.7",
-		"eslint": "^9.20.1",
+		"eslint": "^9.21.0",
 		"eslint-config-prettier": "^10.0.1",
 		"eslint-plugin-svelte": "^2.46.1",
 		"globals": "^16.0.0",
 		"jsdom": "^26.0.0",
-		"prettier": "^3.5.1",
+		"prettier": "^3.5.2",
 		"prettier-plugin-svelte": "^3.3.3",
 		"publint": "^0.3.6",
-		"svelte": "^5.20.2",
+		"svelte": "^5.20.4",
 		"svelte-check": "^4.1.4",
 		"typescript": "^5.7.3",
-		"typescript-eslint": "^8.24.1",
+		"typescript-eslint": "^8.25.0",
 		"vite": "^6.1.1",
-		"vitest": "^3.0.6"
+		"vitest": "^3.0.7"
 	}
 }

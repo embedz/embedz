@@ -49,7 +49,7 @@
     });
 </script>
 
-<div aria-label="Vimeo" style={`background-image: url('${s}');`}>
+<div aria-label="Vimeo Embed" style={`background-image: url('${s}');`}>
     {#if a}
         <iframe 
             src="https://player.vimeo.com/video/{v}?{p()}" 

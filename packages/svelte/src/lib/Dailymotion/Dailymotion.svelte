@@ -48,7 +48,7 @@
     });
 </script>
 
-<div aria-label="Dailymotion" style={`background-image: url('${s}');`}>
+<div aria-label="Dailymotion Embed" style={`background-image: url('${s}');`}>
     {#if a}
         <iframe 
             src="https://geo.dailymotion.com/player.html?video={v}&{p()}" 
