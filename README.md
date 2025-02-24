@@ -155,7 +155,6 @@ type: ``string``
 />
 ```
 
-
 ## License
 
 Licensed under the [MIT license](https://github.com/embedz/embedz/blob/main/LICENSE.md).
