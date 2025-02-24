@@ -28,6 +28,10 @@
         let u = new URLSearchParams(params || '');
         u.append('autoplay', '1');
         u.append('playsinline', '1');
+        /*u.append('enablejsapi', '1');
+        if (typeof window !== 'undefined') {
+            u.append('origin', window.location.origin);
+        }*/
         return u.toString();
     }
 
@@ -50,11 +54,13 @@
     });
 </script>
 
-<div style={`background-image: url('${s}');`}>
+<div aria-label="YouTube" style={`background-image: url('${s}');`}>
     {#if a}
         <iframe 
             src="https://www.youtube-nocookie.com/embed/{v}?{p()}" 
             {title}
+            width="640"
+            height="360"
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
@@ -63,6 +69,18 @@
     {:else}
         <button type="button" onclick={() => a = true} aria-label={title} {title}></button>
     {/if}
+    <noscript>
+        <iframe 
+            src="https://www.youtube-nocookie.com/embed/{v}?{p()}" 
+            {title}
+            width="640"
+            height="360"
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            loading="lazy"
+        ></iframe>
+    </noscript>
 </div>
 
 <style>
