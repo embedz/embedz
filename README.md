@@ -1,6 +1,6 @@
 # embedz
 
-[![NPM](https://img.shields.io/npm/v/nuqs?color=red)](https://www.npmjs.com/package/@embedz/svelte)
+[![NPM](https://img.shields.io/npm/v/@embedz/svelte?color=red)](https://www.npmjs.com/package/@embedz/svelte)
 [![MIT License](https://img.shields.io/github/license/embedz/embedz.svg?color=blue)](https://github.com/embedz/embedz/blob/next/LICENSE)
 
 Easy, dependency free embeds for Svelte and Vue.
