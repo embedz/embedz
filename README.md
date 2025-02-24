@@ -1,14 +1,32 @@
 # embedz
+
+[![NPM](https://img.shields.io/npm/v/nuqs?color=red)](https://www.npmjs.com/package/@embedz/svelte)
+[![MIT License](https://img.shields.io/github/license/embedz/embedz.svg?color=blue)](https://github.com/embedz/embedz/blob/next/LICENSE)
+
 Easy, dependency free embeds for Svelte and Vue.
 
+## Installation
+
 ```shell
-# Supports only Svelte for now, requires Svelte 5 and above
-npm i @embedz/svelte
+# npm
+npm install @embedz/svelte
 ```
+
+```shell
+# pnpm
+pnpm install @embedz/svelte
+```
+
+```shell
+# yarn
+yarn add @embedz/svelte
+```
+
+## Usage
 
 ```svelte
 <script>
-  import { YouTube, Vimeo } from "@embedz/svelte";
+  import { Dailymotion, Vimeo, YouTube } from "@embedz/svelte";
 </script>
 
 <YouTube 
@@ -18,8 +36,6 @@ npm i @embedz/svelte
 ```
 
 ## Youtube
-
-### Usage
 
 ```svelte
 <YouTube id="KRVnaN29GvM" />
@@ -80,8 +96,6 @@ type: ``string``
 ```
 
 ## Vimeo
-
-### Usage
 
 ```svelte
 <Vimeo id="32001208" />
