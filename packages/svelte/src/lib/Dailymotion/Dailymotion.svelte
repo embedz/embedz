@@ -56,7 +56,6 @@
             width="640"
             height="360"
             frameborder="0" 
-            credentialless
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
             loading="lazy"
@@ -75,7 +74,6 @@
             width="640"
             height="360"
             frameborder="0" 
-            credentialless
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
             loading="lazy"
