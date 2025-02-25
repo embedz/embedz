@@ -53,13 +53,13 @@
 <div aria-label="YouTube Embed" style={`background-image: url('${s}');`}>
     {#if a}
         <iframe 
-            src="https://www.youtube-nocookie.com/embed/{v}?{p()}" 
+            src="https://www.youtube.com/embed/{v}?{p()}" 
             {title}
             width="640"
             height="360"
             frameborder="0" 
+            credentialless
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
             loading="lazy"
         ></iframe>
@@ -68,11 +68,12 @@
     {/if}
     <noscript>
         <iframe 
-            src="https://www.youtube-nocookie.com/embed/{v}?{p()}" 
+            src="https://www.youtube.com/embed/{v}?{p()}" 
             {title}
             width="640"
             height="360"
             frameborder="0" 
+            credentialless
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
             loading="lazy"
