@@ -16,10 +16,10 @@
     let v = match(id);
 
     let m = {
-		max: 'maxresdefault',
-		high: 'sddefault',
-		default: 'hqdefault',
-		low: 'default',
+        max: 'maxresdefault',
+        high: 'sddefault',
+        default: 'hqdefault',
+        low: 'default',
     }[posterquality] || 'hqdefault';
 
     let s = poster || `https://i.ytimg.com/vi_webp/${v}/${m}.webp`;

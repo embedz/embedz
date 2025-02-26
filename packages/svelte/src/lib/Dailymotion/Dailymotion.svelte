@@ -15,10 +15,10 @@
     let v = match(id);
 
     let m = {
-		max: '100',
-		high: '80',
-		default: '60',
-		low: '40',
+        max: '100',
+        high: '80',
+        default: '60',
+        low: '40',
     }[posterquality] || '60';
 
     let s = poster || `https://wsrv.nl/?url=https://www.dailymotion.com/thumbnail/video/${v}&output=webp&q=${m}`;

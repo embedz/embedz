@@ -16,10 +16,10 @@
     let v = match(id);
 
     let m = {
-		max: 'thumbnail_large',
-		high: 'thumbnail_medium',
-		default: 'thumbnail_medium',
-		low: 'thumbnail_small',
+        max: 'thumbnail_large',
+        high: 'thumbnail_medium',
+        default: 'thumbnail_medium',
+        low: 'thumbnail_small',
     }[posterquality] || 'thumbnail_medium';
 
     let s = poster || `https://vumbnail.com/${v}_${m}.jpg`;
