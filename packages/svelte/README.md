@@ -228,7 +228,7 @@ type: ``string``
 
 ```shell
 git clone https://github.com/embedz/embedz.git
-cd packages/svelte
+cd embedz/packages/svelte
 npm install
 npm run dev -- --open
 ```
