@@ -27,6 +27,7 @@
     function p() {
         let u = new URLSearchParams(params || '');
         u.set('autoplay', '1');
+        u.set('dnt', '1');
         return u.toString();
     }
 
