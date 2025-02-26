@@ -12,16 +12,17 @@
     let { id, poster, posterquality = "default", params, title }: Props = $props();
 
     let a = $state(false);
-    let v = match(id);
 
-    let m = {
+    let v = $derived(match(id));
+
+    let m = $derived({
         max: '100',
         high: '80',
         default: '60',
         low: '40',
-    }[posterquality] || '60';
+    }[posterquality] || '60');
 
-    let s = poster || `https://wsrv.nl/?url=https://www.dailymotion.com/thumbnail/video/${v}&output=webp&q=${m}`;
+    let s = $derived(poster || `https://wsrv.nl/?url=https://www.dailymotion.com/thumbnail/video/${v}&output=webp&q=${m}`);
 
     function p() {
         let u = new URLSearchParams(params || '');

@@ -13,16 +13,16 @@
 
     let a = $state(false);
 
-    let v = match(id);
+    let v = $derived(match(id));
 
-    let m = {
+    let m = $derived({
         max: 'thumbnail_large',
         high: 'thumbnail_medium',
         default: 'thumbnail_medium',
         low: 'thumbnail_small',
-    }[posterquality] || 'thumbnail_medium';
+    }[posterquality] || 'thumbnail_medium');
 
-    let s = poster || `https://vumbnail.com/${v}_${m}.jpg`;
+    let s = $derived(poster || `https://vumbnail.com/${v}_${m}.jpg`);
 
     function p() {
         let u = new URLSearchParams(params || '');

@@ -13,16 +13,16 @@
 
     let a = $state(false);
 
-    let v = match(id);
+    let v = $derived(match(id));
 
-    let m = {
+    let m = $derived({
         max: 'maxresdefault',
         high: 'sddefault',
         default: 'hqdefault',
         low: 'default',
-    }[posterquality] || 'hqdefault';
+    }[posterquality] || 'hqdefault');
 
-    let s = poster || `https://i.ytimg.com/vi_webp/${v}/${m}.webp`;
+    let s = $derived(poster || `https://i.ytimg.com/vi_webp/${v}/${m}.webp`);
 
     function p() {
         let u = new URLSearchParams(params || '');
