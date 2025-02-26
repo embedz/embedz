@@ -26,8 +26,8 @@
 
     function p() {
         let u = new URLSearchParams(params || '');
-        u.append('autoplay', '1');
-        u.append('playsinline', '1');
+        u.set('autoplay', '1');
+        u.set('playsinline', '1');
         return u.toString();
     }
 
