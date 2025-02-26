@@ -224,11 +224,22 @@ type: ``string``
 />
 ```
 
+## Development
+
+```shell
+git clone https://github.com/embedz/embedz.git
+cd packages/svelte
+npm install
+npm run dev -- --open
+```
+
 ## License
 
 Licensed under the [MIT license](https://github.com/embedz/embedz/blob/main/LICENSE.md).
 
 ## Contributors
+
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 <a href="https://github.com/vueframe/vueframe/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=vueframe/vueframe" />
