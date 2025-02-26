@@ -30,22 +30,18 @@
         return u.toString();
     }
 
-    $effect.root(() => {
-        let h = document.head;
-        let u = [
+    $effect(() => {
+        let { head } = document;
+        for (let url of [
             "https://player.vimeo.com",
             "https://i.vimeocdn.com", 
             "https://f.vimeocdn.com",
             "https://fresnel.vimeocdn.com",
             "https://gstatic.com",
             "https://vumbnail.com",
-        ].forEach(u => {
-            !h.querySelector(`link[href="${u}"]`) && 
-            h.appendChild(Object.assign(document.createElement('link'), {
-                rel: "preconnect",
-                href: u
-            }));
-        });
+        ]) if (!head.querySelector(`link[href="${url}"]`)) {
+            head.append(Object.assign(document.createElement('link'), { rel: 'preconnect', href: url }));
+        }
     });
 </script>
 

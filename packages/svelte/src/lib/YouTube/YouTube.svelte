@@ -31,22 +31,18 @@
         return u.toString();
     }
 
-    $effect.root(() => {
-        let h = document.head;
-        let u = [
-            "https://www.youtube-nocookie.com",
+    $effect(() => {
+        let { head } = document;
+        for (let url of [
+            "https://www.youtube.com",
             "https://www.google.com",
             "https://googleads.g.doubleclick.net", 
             "https://static.doubleclick.net",
             "https://gstatic.com",
             "https://i.ytimg.com",
-        ].forEach(u => {
-            !h.querySelector(`link[href="${u}"]`) && 
-            h.appendChild(Object.assign(document.createElement('link'), {
-                rel: "preconnect",
-                href: u
-            }));
-        });
+        ]) if (!head.querySelector(`link[href="${url}"]`)) {
+            head.append(Object.assign(document.createElement('link'), { rel: 'preconnect', href: url }));
+        }
     });
 </script>
 

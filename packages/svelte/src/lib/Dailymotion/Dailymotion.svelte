@@ -29,22 +29,17 @@
         return u.toString();
     }
 
-    $effect.root(() => {
-        const h = document.head;
-        [
+    $effect(() => {
+        let { head } = document;
+        for (let url of [
             "https://api.dailymotion.com",
-            "https://geo.dailymotion.com",
+            "https://geo.dailymotion.com", 
             "https://www.dailymotion.com",
             "https://wsrv.nl",
-            "https://gstatic.com",
-        ].forEach(u => {
-            if (!h.querySelector(`link[href="${u}"]`)) {
-                h.appendChild(Object.assign(document.createElement('link'), {
-                    rel: "preconnect",
-                    href: u
-                }));
-            }
-        });
+            "https://gstatic.com"
+        ]) if (!head.querySelector(`link[href="${url}"]`)) {
+            head.append(Object.assign(document.createElement('link'), { rel: 'preconnect', href: url }));
+        }
     });
 </script>
 

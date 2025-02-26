@@ -1,6 +1,6 @@
 {
 	"name": "@embedz/svelte",
-	"version": "1.0.33",
+	"version": "1.0.34",
 	"description": "Easy, dependency free embeds for Svelte and Vue.",
 	"repository": {
 		"type": "git",
