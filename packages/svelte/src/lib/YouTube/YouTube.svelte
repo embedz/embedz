@@ -90,7 +90,6 @@
         justify-content: center;
         display: block;
         overflow: hidden;
-        cursor: pointer;
         position: relative;
         contain: content;
         background-position: center center;
