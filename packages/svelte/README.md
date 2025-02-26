@@ -93,7 +93,7 @@ type: ``string``
 ```svelte
 <YouTube
   id="KRVnaN29GvM"
-  title="Nuxt in 100 Seconds"
+  title="Rock the Boat"
 />
 ```
 
