@@ -6,10 +6,11 @@
         poster?: string;
         posterquality?: "max" | "high" | "default" | "low";
         params?: string;
+        ratio?: "16:9" | "16:10" | "32:9" | "21:9" | "5:4" | "4:3" | "3:2" | "1:1" | "9:16";
         title?: string;
     }
 
-    let { id, poster, posterquality = "default", params, title }: Props = $props();
+    let { id, poster, posterquality = "default", params, ratio = "16:9", title }: Props = $props();
 
     let a = $state(false);
 
@@ -19,10 +20,12 @@
         max: '100',
         high: '80',
         default: '60',
-        low: '40',
+        low: '20',
     }[posterquality] || '60');
 
     let s = $derived(poster || `https://wsrv.nl/?url=https://www.dailymotion.com/thumbnail/video/${v}&output=webp&q=${m}`);
+
+    let r = $derived(ratio.split(':').join(' / '));
 
     function p() {
         let u = new URLSearchParams(params || '');
@@ -44,13 +47,13 @@
     });
 </script>
 
-<div aria-label="Dailymotion Embed" style={`background-image: url('${s}');`}>
+<div aria-label="Dailymotion Embed" style={`background-image: url('${s}');aspect-ratio: ${r};`}>
     {#if a}
         <iframe 
             src="https://geo.dailymotion.com/player.html?video={v}&{p()}" 
             {title}
-            width="640"
-            height="360"
+            width="720"
+            height="405"
             frameborder="0" 
             credentialless
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -68,8 +71,8 @@
         <iframe 
             src="https://geo.dailymotion.com/player.html?video={v}&{p()}" 
             {title}
-            width="640"
-            height="360"
+            width="720"
+            height="405"
             frameborder="0" 
             credentialless
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -81,7 +84,6 @@
 
 <style>
     div {
-        aspect-ratio: 16 / 9;
         width: 100%;
         max-width: 720px;
         align-items: center;

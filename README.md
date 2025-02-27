@@ -89,6 +89,19 @@ type: ``string``
 />
 ```
 
+### ratio
+
+type: ``"16:9" | "16:10" | "32:9" | "21:9" | "5:4" | "4:3" | "3:2" | "1:1" | "9:16"``
+
+default: ``"16:9"``
+
+```svelte
+<YouTube
+  id="KRVnaN29GvM"
+  ratio="4:3"
+/>
+```
+
 ### title
 
 type: ``string``
@@ -151,6 +164,19 @@ type: ``string``
 />
 ```
 
+### ratio
+
+type: ``"16:9" | "16:10" | "32:9" | "21:9" | "5:4" | "4:3" | "3:2" | "1:1" | "9:16"``
+
+default: ``"16:9"``
+
+```svelte
+<Vimeo
+  id="32001208"
+  ratio="4:3"
+/>
+```
+
 ### title
 
 type: ``string``
@@ -210,6 +236,19 @@ type: ``string``
 <Dailymotion 
   id="x8e31lf"
   params="mute=true&loop=false"
+/>
+```
+
+### ratio
+
+type: ``"16:9" | "16:10" | "32:9" | "21:9" | "5:4" | "4:3" | "3:2" | "1:1" | "9:16"``
+
+default: ``"16:9"``
+
+```svelte
+<Dailymotion 
+  id="x8e31lf"
+  ratio="4:3"
 />
 ```
 

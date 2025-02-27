@@ -6,10 +6,11 @@
         poster?: string;
         posterquality?: "max" | "high" | "default" | "low";
         params?: string;
+        ratio?: "16:9" | "16:10" | "32:9" | "21:9" | "5:4" | "4:3" | "3:2" | "1:1" | "9:16";
         title?: string;
     }
 
-    let { id, poster, posterquality = "default", params, title }: Props = $props();
+    let { id, poster, posterquality = "default", params, ratio = "16:9", title }: Props = $props();
 
     let a = $state(false);
 
@@ -23,6 +24,8 @@
     }[posterquality] || 'hqdefault');
 
     let s = $derived(poster || `https://i.ytimg.com/vi_webp/${v}/${m}.webp`);
+
+    let r = $derived(ratio.split(':').join(' / '));
 
     function p() {
         let u = new URLSearchParams(params || '');
@@ -46,13 +49,13 @@
     });
 </script>
 
-<div aria-label="YouTube Embed" style={`background-image: url('${s}');`}>
+<div aria-label="YouTube Embed" style={`background-image: url('${s}');aspect-ratio: ${r};`}>
     {#if a}
         <iframe 
             src="https://www.youtube.com/embed/{v}?{p()}" 
             {title}
-            width="640"
-            height="360"
+            width="720"
+            height="405"
             frameborder="0" 
             credentialless
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -66,8 +69,8 @@
         <iframe 
             src="https://www.youtube.com/embed/{v}?{p()}" 
             {title}
-            width="640"
-            height="360"
+            width="720"
+            height="405"
             frameborder="0" 
             credentialless
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
