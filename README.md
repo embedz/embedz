@@ -91,9 +91,7 @@ type: ``string``
 
 ### ratio
 
-type: ``"16:9" | "16:10" | "32:9" | "21:9" | "5:4" | "4:3" | "3:2" | "1:1" | "9:16"``
-
-default: ``"16:9"``
+type: ``string``
 
 ```svelte
 <YouTube
@@ -166,9 +164,7 @@ type: ``string``
 
 ### ratio
 
-type: ``"16:9" | "16:10" | "32:9" | "21:9" | "5:4" | "4:3" | "3:2" | "1:1" | "9:16"``
-
-default: ``"16:9"``
+type: ``string``
 
 ```svelte
 <Vimeo
@@ -241,9 +237,7 @@ type: ``string``
 
 ### ratio
 
-type: ``"16:9" | "16:10" | "32:9" | "21:9" | "5:4" | "4:3" | "3:2" | "1:1" | "9:16"``
-
-default: ``"16:9"``
+type: ``string``
 
 ```svelte
 <Dailymotion 

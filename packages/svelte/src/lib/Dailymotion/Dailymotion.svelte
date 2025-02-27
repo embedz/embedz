@@ -6,7 +6,7 @@
         poster?: string;
         posterquality?: "max" | "high" | "default" | "low";
         params?: string;
-        ratio?: "16:9" | "16:10" | "32:9" | "21:9" | "5:4" | "4:3" | "3:2" | "1:1" | "9:16";
+        ratio?: string;
         title?: string;
     }
 
@@ -47,7 +47,7 @@
     });
 </script>
 
-<div aria-label="Dailymotion Embed" style={`background-image: url('${s}');aspect-ratio: ${r};`}>
+<div aria-label="Dailymotion Embed" style={`background-image: url('${s}');aspect-ratio: ${r || "16 / 9"};`}>
     {#if a}
         <iframe 
             src="https://geo.dailymotion.com/player.html?video={v}&{p()}" 
