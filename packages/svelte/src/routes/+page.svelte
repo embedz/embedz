@@ -5,7 +5,7 @@
 <Dailymotion 
   id="x8e31lf" 
   posterquality="max"
-  ratio=""
+  ratio="16:9"
   title="Dolby Vision"
 />
 
