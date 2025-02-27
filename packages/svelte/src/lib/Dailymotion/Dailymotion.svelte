@@ -20,7 +20,7 @@
         max: '100',
         high: '80',
         default: '60',
-        low: '20',
+        low: '10',
     }[posterquality] || '60');
 
     let s = $derived(poster || `https://wsrv.nl/?url=https://www.dailymotion.com/thumbnail/video/${v}&output=webp&q=${m}`);
