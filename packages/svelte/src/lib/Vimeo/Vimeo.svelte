@@ -96,8 +96,6 @@
         contain: content;
         background-position: center center;
         background-size: cover;
-        border: none;
-        outline: none;
         text-decoration: none;
         cursor: pointer;
     }
@@ -121,7 +119,8 @@
         outline: 0 !important;
     }
 
-    a:hover > button {
+    a:hover > button,
+    a button:focus {
         background-color: rgb(0, 173, 239);
         opacity: 1;
     }
@@ -131,9 +130,6 @@
         border-style: solid;
         border-width: 10px 0 10px 20px;
         border-color: transparent transparent transparent #fff;
-    }
-
-    a > button::before {
         position: absolute;
         top: 50%;
         left: 50%;

@@ -96,8 +96,6 @@
         contain: content;
         background-position: center center;
         background-size: cover;
-        border: none;
-        outline: none;
         text-decoration: none;
         cursor: pointer;
     }

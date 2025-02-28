@@ -54,7 +54,7 @@
     });
 </script>
 
-<a 
+<a
     href="https://www.dailymotion.com/video/{v}"
     target="_blank"
     rel="noopener noreferrer"
@@ -96,8 +96,6 @@
         contain: content;
         background-position: center center;
         background-size: cover;
-        border: none;
-        outline: none;
         text-decoration: none;
         cursor: pointer;
     }
@@ -130,7 +128,8 @@
         display: flex;
     }
 
-    a:hover > button {
+    a:hover > button,
+    a button:focus {
         background-color: rgba(255, 255, 255, 0.25);
         opacity: 1;
     }
