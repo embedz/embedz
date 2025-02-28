@@ -34,6 +34,13 @@
         return u.toString();
     }
 
+    async function c(event: MouseEvent) {
+        if (!(event.metaKey || event.ctrlKey)) {
+            event.preventDefault();
+            a = true;
+        }
+    }
+
     $effect(() => {
         let { head } = document;
         for (let url of [
@@ -49,10 +56,19 @@
     });
 </script>
 
-<div aria-label="Vimeo Embed" style={`background-image: url('${s}');aspect-ratio: ${r || "16 / 9"};`}>
+<a 
+    href="https://vimeo.com/{v}"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={title}
+    {title} 
+    style={`background-image: url('${s}');aspect-ratio: ${r || "16 / 9"};`}
+    onclick={c}
+>
     {#if a}
         <iframe 
             src="https://player.vimeo.com/video/{v}?{p()}" 
+            aria-label={title}
             {title}
             width="720"
             height="405"
@@ -63,27 +79,13 @@
             loading="lazy"
         ></iframe>
     {:else}
-        <button type="button" onclick={() => a = true} aria-label={title} {title}>
-            <span></span>
-        </button>
+        <button type="button" aria-label="button"></button>
     {/if}
-    <noscript>
-        <iframe 
-            src="https://player.vimeo.com/video/{v}?{p()}" 
-            {title}
-            width="720"
-            height="405"
-            frameborder="0" 
-            credentialless
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-            loading="lazy"
-        ></iframe>
-    </noscript>
-</div>
+</a>
 
 <style>
-    div {
+    a {
+        aspect-ratio: 16 / 9;
         width: 100%;
         max-width: 720px;
         align-items: center;
@@ -94,24 +96,18 @@
         contain: content;
         background-position: center center;
         background-size: cover;
-    }
-
-    div > button {
-        display: flex;
-        width: 100%;
-        height: 100%;
-        position: absolute;
+        border: none;
+        outline: none;
+        text-decoration: none;
         cursor: pointer;
-        z-index: 1;
-        border: 0 !important;
-        outline: 0 !important;
-        inset: 0;
-        justify-content: center;
-        align-items: center;
-        background-color: transparent;
     }
 
-    div > button span {
+    a > button {
+        display: block;
+        position: absolute;
+        transform: translate3d(-50%, -50%, 0);
+        top: 50%;
+        left: 50%;
         font-size: 10px;
         padding: 0;
         width: 6.5em;
@@ -120,33 +116,35 @@
         opacity: .8;
         border-radius: .5em;
         transition: opacity .2s ease-out, background .2s ease-out;
+        cursor: pointer;
+        border: 0 !important;
+        outline: 0 !important;
     }
 
-    div:hover > button span {
+    a:hover > button {
         background-color: rgb(0, 173, 239);
         opacity: 1;
     }
 
-    div > button span::before {
+    a > button::before {
         content: '';
         border-style: solid;
         border-width: 10px 0 10px 20px;
         border-color: transparent transparent transparent #fff;
     }
 
-    div > button span::before {
+    a > button::before {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate3d(-50%, -50%, 0);
     }
 
-    div > iframe {
+    a > iframe {
         width: 100%;
         height: 100%;
         position: absolute;
         inset: 0;
         border: 0;
-        z-index: 2;
     }
 </style>

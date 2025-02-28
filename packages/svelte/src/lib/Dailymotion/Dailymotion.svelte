@@ -33,6 +33,13 @@
         return u.toString();
     }
 
+    async function c(event: MouseEvent) {
+        if (!(event.metaKey || event.ctrlKey)) {
+            event.preventDefault();
+            a = true;
+        }
+    }
+
     $effect(() => {
         let { head } = document;
         for (let url of [
@@ -47,10 +54,19 @@
     });
 </script>
 
-<div aria-label="Dailymotion Embed" style={`background-image: url('${s}');aspect-ratio: ${r || "16 / 9"};`}>
+<a 
+    href="https://vimeo.com/{v}"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={title}
+    {title} 
+    style={`background-image: url('${s}');aspect-ratio: ${r || "16 / 9"};`}
+    onclick={c}
+>
     {#if a}
         <iframe 
             src="https://geo.dailymotion.com/player.html?video={v}&{p()}" 
+            aria-label={title}
             {title}
             width="720"
             height="405"
@@ -61,29 +77,15 @@
             loading="lazy"
         ></iframe>
     {:else}
-        <button type="button" onclick={() => a = true} aria-label={title} {title}>
-            <span>
-                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M39.72 22.26L15.72 10.26C15.12 9.95997 14.4 9.98997 13.83 10.35C13.26 10.71 12.9 11.34 12.9 12L12.9 36C12.9 36.69 13.26 37.29 13.83 37.65C14.13 37.83 14.49 37.95 14.85 37.95C15.15 37.95 15.45 37.89 15.72 37.74L39.72 25.74C40.38 25.41 40.8 24.75 40.8 24C40.8 23.25 40.38 22.59 39.72 22.26Z" fill="currentColor"></path></svg>
-            </span>
+        <button type="button" aria-label="button">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M39.72 22.26L15.72 10.26C15.12 9.95997 14.4 9.98997 13.83 10.35C13.26 10.71 12.9 11.34 12.9 12L12.9 36C12.9 36.69 13.26 37.29 13.83 37.65C14.13 37.83 14.49 37.95 14.85 37.95C15.15 37.95 15.45 37.89 15.72 37.74L39.72 25.74C40.38 25.41 40.8 24.75 40.8 24C40.8 23.25 40.38 22.59 39.72 22.26Z" fill="currentColor"></path></svg>
         </button>
     {/if}
-    <noscript>
-        <iframe 
-            src="https://geo.dailymotion.com/player.html?video={v}&{p()}" 
-            {title}
-            width="720"
-            height="405"
-            frameborder="0" 
-            credentialless
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-            loading="lazy"
-        ></iframe>
-    </noscript>
-</div>
+</a>
 
 <style>
-    div {
+    a {
+        aspect-ratio: 16 / 9;
         width: 100%;
         max-width: 720px;
         align-items: center;
@@ -94,24 +96,18 @@
         contain: content;
         background-position: center center;
         background-size: cover;
-    }
-
-    div > button {
-        display: flex;
-        width: 100%;
-        height: 100%;
-        position: absolute;
+        border: none;
+        outline: none;
+        text-decoration: none;
         cursor: pointer;
-        z-index: 1;
-        border: 0 !important;
-        outline: 0 !important;
-        inset: 0;
-        justify-content: center;
-        align-items: center;
-        background-color: transparent;
     }
 
-    div > button span {
+    a > button {
+        display: block;
+        position: absolute;
+        transform: translate3d(-50%, -50%, 0);
+        top: 50%;
+        left: 50%;
         height: 5rem;
         width: 5rem;
         border-radius: 9999px;
@@ -121,26 +117,29 @@
         text-align: center;
         color: white;
         transition: background-color 0.02s linear;
+        cursor: pointer;
+        border: 0 !important;
+        outline: 0 !important;
+        background-color: transparent;
     }
 
-    div > button span svg {
+    a > button > svg {
         height: 4rem;
         width: 4rem;
         color: inherit;
         display: flex;
     }
 
-    div:hover > button span {
+    a:hover > button {
         background-color: rgba(255, 255, 255, 0.25);
         opacity: 1;
     }
 
-    div > iframe {
+    a > iframe {
         width: 100%;
         height: 100%;
         position: absolute;
         inset: 0;
         border: 0;
-        z-index: 2;
     }
 </style>
