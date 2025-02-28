@@ -5,20 +5,17 @@
 <Dailymotion 
   id="x8e31lf" 
   posterquality="max"
-  ratio="16:9"
   title="Dolby Vision"
 />
 
 <YouTube 
-  id="KRVnaN29GvM" 
-  posterquality="max"
-  ratio="16:9"
-  title="Rock the Boat"
+  id="C7eGZUBdL4g" 
+	posterquality="max"
+  title="Rock the House"
 />
 
 <Vimeo 
   id="32001208" 
   posterquality="max"
-  ratio="16:9"
   title="Earth"
 />

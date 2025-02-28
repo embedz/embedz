@@ -32,7 +32,7 @@ yarn add @embedz/svelte
 </script>
 
 <YouTube 
-  id="KRVnaN29GvM" 
+  id="C7eGZUBdL4g" 
   posterquality="max"
 />
 ```
@@ -45,13 +45,13 @@ yarn add @embedz/svelte
 type: ``string``
 
 ```svelte
-<YouTube id="KRVnaN29GvM" />
+<YouTube id="C7eGZUBdL4g" />
 ```
 
 You can also pass in the full URL for the video
 
 ```svelte
-<YouTube id="https://youtu.be/KRVnaN29GvM" />
+<YouTube id="https://youtu.be/C7eGZUBdL4g" />
 ```
 
 ### poster
@@ -60,7 +60,7 @@ type: ``string``
 
 ```svelte
 <YouTube
-  id="KRVnaN29GvM"
+  id="C7eGZUBdL4g"
   poster="https://picsum.photos/1280/720"
 />
 ```
@@ -73,7 +73,7 @@ default: ``"default"``
 
 ```svelte
 <YouTube
-  id="KRVnaN29GvM"
+  id="C7eGZUBdL4g"
   posterquality="low"
 />
 ```
@@ -84,7 +84,7 @@ type: ``string``
 
 ```svelte
 <YouTube
-  id="KRVnaN29GvM"
+  id="C7eGZUBdL4g"
   params="controls=0&mute=1"
 />
 ```
@@ -95,7 +95,7 @@ type: ``string``
 
 ```svelte
 <YouTube
-  id="KRVnaN29GvM"
+  id="C7eGZUBdL4g"
   ratio="4:3"
 />
 ```
@@ -106,8 +106,8 @@ type: ``string``
 
 ```svelte
 <YouTube
-  id="KRVnaN29GvM"
-  title="Rock the Boat"
+  id="C7eGZUBdL4g"
+  title="Rock the House"
 />
 ```
 
