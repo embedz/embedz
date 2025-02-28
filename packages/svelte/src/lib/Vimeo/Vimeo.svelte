@@ -79,7 +79,7 @@
             loading="lazy"
         ></iframe>
     {:else}
-        <button type="button" aria-label="button"></button>
+        <button tabindex="-1" type="button" aria-label="button"></button>
     {/if}
 </a>
 
@@ -119,8 +119,9 @@
         outline: 0 !important;
     }
 
+    a:focus > button,
     a:hover > button,
-    a button:focus {
+    a > button:focus {
         background-color: rgb(0, 173, 239);
         opacity: 1;
     }

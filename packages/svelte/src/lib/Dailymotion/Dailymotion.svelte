@@ -77,7 +77,7 @@
             loading="lazy"
         ></iframe>
     {:else}
-        <button type="button" aria-label="button">
+        <button tabindex="-1" type="button" aria-label="button">
             <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M39.72 22.26L15.72 10.26C15.12 9.95997 14.4 9.98997 13.83 10.35C13.26 10.71 12.9 11.34 12.9 12L12.9 36C12.9 36.69 13.26 37.29 13.83 37.65C14.13 37.83 14.49 37.95 14.85 37.95C15.15 37.95 15.45 37.89 15.72 37.74L39.72 25.74C40.38 25.41 40.8 24.75 40.8 24C40.8 23.25 40.38 22.59 39.72 22.26Z" fill="currentColor"></path></svg>
         </button>
     {/if}
@@ -128,8 +128,9 @@
         display: flex;
     }
 
+    a:focus > button,
     a:hover > button,
-    a button:focus {
+    a > button:focus {
         background-color: rgba(255, 255, 255, 0.25);
         opacity: 1;
     }
