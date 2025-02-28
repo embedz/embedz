@@ -55,7 +55,7 @@
 </script>
 
 <a 
-    href="https://vimeo.com/{v}"
+    href="https://www.dailymotion.com/video/{v}"
     target="_blank"
     rel="noopener noreferrer"
     aria-label={title}

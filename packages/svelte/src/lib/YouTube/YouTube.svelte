@@ -57,7 +57,7 @@
 </script>
 
 <a 
-    href="https://youtu.be/{v}"
+    href="https://www.youtube.com/watch?v={v}"
     target="_blank"
     rel="noopener noreferrer"
     aria-label={title}
