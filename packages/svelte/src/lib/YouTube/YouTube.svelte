@@ -10,7 +10,7 @@
         title?: string;
     }
 
-    let { id, poster, posterquality = "default", params, ratio = "16:9", title }: Props = $props();
+    let { id, poster, posterquality = "default", params, ratio = "16:9", title, ...other }: Props = $props();
 
     let a = $state(false);
 
@@ -64,6 +64,7 @@
     {title} 
     style={`background-image: url('${s}');aspect-ratio: ${r || "16 / 9"};`}
     onclick={c}
+    {...other}
 >
     {#if a}
         <iframe 
